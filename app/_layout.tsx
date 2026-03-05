@@ -1,4 +1,4 @@
-import {Text, TouchableOpacity} from "react-native";
+import {Text, TouchableOpacity, View} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useState } from "react"
 import { Background, Button } from "@react-navigation/elements";
@@ -15,12 +15,12 @@ export default function RootLayout() {
 
   return (
     <SafeAreaView style={styles.screen}> 
-      <div style={styles.calc}>
-      <Text style={styles.visor}>Aqui vai estar o número</Text>
-      <hr style={{ border: 'none', borderTop: '1px solid #cccccc', margin: '20px 0' }} />
-      <div style={styles.boardNumbers}>
+      <View style={styles.visor}>
+        <Text style={styles.visorValor}>Valor</Text>
+      </View>
+      <View style={styles.boardNumbers}>
         <div style={styles.boardButtons}>
-          <TouchableOpacity><Text style={styles.button}>1</Text></TouchableOpacity>
+          <TouchableOpacity><Text onPress={(event) => console.log(event.target)} style={styles.button}>1</Text></TouchableOpacity>
           <TouchableOpacity><Text style={styles.button}>2</Text></TouchableOpacity>
           <TouchableOpacity><Text style={styles.button}>3</Text></TouchableOpacity>
           <TouchableOpacity><Text style={styles.button}>x</Text></TouchableOpacity>
@@ -38,15 +38,13 @@ export default function RootLayout() {
           <TouchableOpacity><Text style={styles.button}>+</Text></TouchableOpacity>
         </div>
         <div style={styles.boardButtons}>
-          <TouchableOpacity><Text style={styles.button}>+</Text></TouchableOpacity>
+          <TouchableOpacity><Text style={styles.button}>C</Text></TouchableOpacity>
           <TouchableOpacity><Text style={styles.button}>0</Text></TouchableOpacity>
           <TouchableOpacity><Text style={styles.button}>/</Text></TouchableOpacity>
           <TouchableOpacity><Text style={styles.buttonEqual}>=</Text></TouchableOpacity>
         </div>
-      </div>
-      </div>
+      </View>
     </SafeAreaView>
-    
   );
 }
 
@@ -59,14 +57,18 @@ const styles = StyleSheet.create({
     height: "100%"
   },
 
-  calc: {
-    padding: 20,
-    borderRadius: 10
+  visor: {
+    width: "100%",
+    margin: 30,
+    fontSize: 20,
+    textAlign: "right",
+    paddingHorizontal: 45
   },
 
-  visor: {
+  visorValor: {
+    fontSize: 20,
     color: "#cccccc",
-    width: 100
+    textAlign: "right"
   },
 
 	boardNumbers: {
@@ -76,24 +78,24 @@ const styles = StyleSheet.create({
 
   button: {
     backgroundColor: '#d1d1d1',
-    padding: 20,
-    paddingHorizontal: 30,
+    padding: 30,
+    paddingHorizontal: 40,
     borderRadius: 90,
     fontSize: 25,
     margin: 3
   },
 
   boardButtons: {
-    display: "flex",
+    display: "flex"
   },
 
   buttonEqual: {
     backgroundColor: '#e49400',
-    padding: 20,
+    padding: 30,
     borderRadius: 90,
     textAlign: 'center',
     fontSize: 25,
-    paddingHorizontal: 30,
+    paddingHorizontal: 40,
   }
 
 })
