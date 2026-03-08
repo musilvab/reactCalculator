@@ -17,4 +17,4 @@ Aplicativo de calculadora mobile desenvolvido em **React Native**
 ## Protótipo
 
 * Baixa fidelidade
- ![Rascunho da tela]("C:\Users\Murilo\Downloads\prototipoBaixaFidelidade.jpeg")
+ ![Rascunho da tela]("Prototipo/prototipoBaixaFidelidade.jpeg")
