@@ -14,7 +14,5 @@ Aplicativo de calculadora mobile desenvolvido em **React Native**
 * Expo
 * JavaScript
 
-## Protótipo
-
-* Baixa fidelidade
- ![Rascunho da tela]("Prototipo/prototipoBaixaFidelidade.jpeg")
+## Protótipo (Baixa fidelidade)
+![prototipoBaixaFidelidade](https://github.com/user-attachments/assets/dcfef83e-6446-449f-8270-b86ff9aabf5d)
